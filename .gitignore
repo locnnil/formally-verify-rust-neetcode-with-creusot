@@ -1,0 +1,12 @@
+# Rust files
+/target
+**/*.rs.bk
+Cargo.lock
+# rustc will dump stack traces when hitting an internal compiler error to PWD
+rustc-ice-*.txt
+
+# Creusot
+verif/
+
+# Workshop files
+.workshop.lock
