@@ -1,0 +1,5 @@
+{
+  "prove_command": "cd /project; rm -rf target/creusot; cargo creusot \"$@\" -- --workspace --target x86_64-unknown-linux-gnu",
+  "context_command": "cd /project; rm -rf target/creusot; cargo creusot \"$@\" -- --workspace --target x86_64-unknown-linux-gnu {file} --why3find-arg=-X",
+  "check_timeout": 50
+}
