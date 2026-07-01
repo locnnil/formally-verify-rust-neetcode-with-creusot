@@ -1,0 +1,15 @@
+name: dev
+base: ubuntu@26.04
+sdks:
+  - name: rust
+    channel: latest/stable
+  - name: uv
+  - name: copilot
+  - name: project-fv
+
+actions:
+  prove: |
+    cd /project
+    rm -rf target/creusot
+    PROJECT_ROOT=/project
+    cargo creusot "$@" -- --workspace --target x86_64-unknown-linux-gnu

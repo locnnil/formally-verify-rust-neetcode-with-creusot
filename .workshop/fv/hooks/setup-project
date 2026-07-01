@@ -1,0 +1,6 @@
+#!/usr/bin/bash
+
+echo 'export CREUSOT_RUSTC=/snap/creusot/current/bin/creusot-rustc' >>~/.profile
+
+CREUSOT_TOOLCHAIN=$(cargo-creusot creusot version 2>&1 | grep -oP 'Rust toolchain \K\S+')
+rustup target add x86_64-unknown-linux-gnu --toolchain "$CREUSOT_TOOLCHAIN"

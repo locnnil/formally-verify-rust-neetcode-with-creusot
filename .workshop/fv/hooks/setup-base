@@ -1,0 +1,14 @@
+#!/usr/bin/bash
+apt-get update
+apt-get install -y eatmydata
+eatmydata -- apt-get upgrade -y
+eatmydata -- apt-get install -y \
+  gcc \
+  g++ \
+  libclang-dev \
+  make \
+  wget
+
+wget https://github.com/canonical/creusot-snap/releases/download/latest/creusot_0.1_amd64.snap -O /tmp/creusot.snap
+snap install /tmp/*.snap --dangerous --classic
+snap alias creusot.cargo-creusot cargo-creusot
