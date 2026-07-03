@@ -1,0 +1,10 @@
+[package]
+name = "p003_two_sum"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+creusot-std = { workspace = true }
+
+[lints]
+workspace = true
